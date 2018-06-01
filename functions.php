@@ -28,6 +28,19 @@ function pageTitle()
 
     echo ucwords(str_replace('-', ' ', $page));
 }
+/**
+ * Website navigation.
+ */
+function navMenu($sep = ' | ')
+{
+    $nav_menu = '';
+
+    foreach (config('nav_menu') as $uri => $name) {
+        $nav_menu .= '<a href="/'.(config('pretty_uri') || $uri == '' ? '' : '?page=').$uri.'">'.$name.'</a>'.$sep;
+    }
+
+    echo trim($nav_menu, $sep);
+}
 
 /**
  * Displays page content. It takes the data from 
