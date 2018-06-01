@@ -11,9 +11,7 @@ function config($key = '')
         'name' => 'Industrial Automation',
         'nav_menu' => [
             '' => 'Home',
-            'about-us' => 'About Us',
-            'products' => 'Products',
-            'contact' => 'Contact',
+
         ],
         'template_path' => 'template',
         'content_path' => 'content',
